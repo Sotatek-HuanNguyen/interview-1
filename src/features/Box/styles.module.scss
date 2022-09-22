@@ -1,0 +1,38 @@
+.wrap {
+    margin: auto;
+    min-width: 800px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+
+}
+
+.action {
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.5);
+    width: fit-content;
+    padding: 10px;
+    select,
+    input {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 40px;
+        border: solid 1px black;
+    }
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+}
