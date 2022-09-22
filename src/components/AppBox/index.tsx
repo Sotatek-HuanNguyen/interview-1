@@ -1,8 +1,8 @@
-import { IBox, IItemList } from 'models/common';
+import { IBox, IItemList } from 'models/Box';
 import React from 'react';
 import s from './styles.module.scss';
-import { selectBoxs, removeBox } from 'features/Box/boxSlice';
-import { useAppDispatch, useAppSelector } from 'stores/hooks';
+import { removeBox } from 'features/Box/boxSlice';
+import { useAppDispatch } from 'stores/hooks';
 import AppItem from 'components/AppItem';
 
 interface IProps {

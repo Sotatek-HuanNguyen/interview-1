@@ -1,11 +1,11 @@
-import { IBox } from 'models/common';
+import { IBox, IItemList } from 'models/Box';
 import React, { useState } from 'react';
 import s from './styles.module.scss';
 import { selectBoxs, addItemBox, removeItem } from 'features/Box/boxSlice';
 import { useAppDispatch, useAppSelector } from 'stores/hooks';
 
 interface IProps {
-  content: IBox;
+  content: IItemList;
   boxId: string;
 }
 

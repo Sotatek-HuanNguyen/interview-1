@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import s from './styles.module.scss';
 import { useAppSelector, useAppDispatch } from '../../stores/hooks';
 import { selectBoxs, addBox, addItemBox } from './boxSlice';
-import { IBox } from 'models/common';
+import { IBox } from 'models/Box';
 import AppBox from 'components/AppBox';
 
 const Box = () => {

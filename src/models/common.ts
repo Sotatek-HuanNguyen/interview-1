@@ -23,14 +23,3 @@ export interface ITokenInfo {
   expiresAt: number | null;
   refreshToken: string | null;
 }
-
-export interface IItemList {
-  id: string;
-  name: string;
-}
-
-export interface IBox {
-  id: string;
-  name: string;
-  list?: any
-}

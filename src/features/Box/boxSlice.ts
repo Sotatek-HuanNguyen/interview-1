@@ -1,7 +1,7 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IBox } from 'models/common';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IBox, IReqAddItem, IReqRemoveItem } from 'models/Box';
 import * as _ from 'lodash';
-import { RootState, AppThunk } from '../../stores/store';
+import { RootState } from '../../stores/store';
 
 export interface BoxState {
   boxs: IBox[];
@@ -12,20 +12,20 @@ const initialState: BoxState = {
 };
 
 export const boxSlice = createSlice({
-  name: 'counter',
+  name: 'box',
   initialState,
   reducers: {
-    addBox: (state, action: PayloadAction<any>) => {
+    addBox: (state, action: PayloadAction<IBox>) => {
       state.boxs = [...state.boxs, ...[action.payload]];
     },
 
-    removeBox: (state, action: PayloadAction<any>) => {
+    removeBox: (state, action: PayloadAction<string>) => {
       state.boxs = _.reject(state.boxs, (box) => {
         return box.id === action.payload;
       });
     },
 
-    addItemBox: (state, action: PayloadAction<any>) => {
+    addItemBox: (state, action: PayloadAction<IReqAddItem>) => {
       let box_index = state.boxs.findIndex((box) => {
         return box.id === action.payload.idBox;
       });
@@ -42,7 +42,7 @@ export const boxSlice = createSlice({
       });
     },
 
-    removeItem: (state, action: PayloadAction<any>) => {
+    removeItem: (state, action: PayloadAction<IReqRemoveItem>) => {
       let box_index = state.boxs.findIndex((box) => {
         return box.id === action.payload.boxId;
       });
